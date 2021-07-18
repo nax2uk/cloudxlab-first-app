@@ -3,33 +3,13 @@ language: generic
 services:
   - docker
 
-deploy:
+  deploy:
   - provider: elasticbeanstalk
-    region: ap-south-1
-    app: "my-first-app"
-    env: "Myfirstapp-env"
-
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
-
-    bucket_name: "my-first-app-bucket"
-
-    bucket_path: "docker"
-
+    region: eu-west-2
+    app: "cloudxlab-first-app-test"
+    env: "Cloudxlabfirstapptest-env"
+    bucket_name: "cloudxlab-first-app-to-be-deleted"
     on:
-      branch: main
-
-  - provider: elasticbeanstalk
-    region: ap-south-1
-    app: "test-app"
-    env: "Testapp-env"
-
-    access_key_id: $AWS_ACCESS_KEY
-    secret_access_key: $AWS_SECRET_KEY
-
-    bucket_name: "my-first-app-bucket"
-  
-    bucket_path: "docker"
-
-    on:
-      branch: testing 
+      branch: testing
