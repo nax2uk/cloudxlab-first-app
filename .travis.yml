@@ -11,5 +11,6 @@ services:
     app: "cloudxlab-first-app-test"
     env: "Cloudxlabfirstapptest-env"
     bucket_name: "cloudxlab-first-app-to-be-deleted"
+    bucket_path: 'docker'
     on:
       branch: testing
